@@ -1,0 +1,15 @@
+.form-error{
+  width: calc(100% + 32px);
+  margin-top: -16px !important;
+  margin-left: -16px;
+  height: auto;
+  color: white;
+  background-color: red;
+  padding: 20px 10px;
+  margin-bottom: 15px;
+  p{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,26 @@
+.example-container {
+  width: 100%;
+  height: 100%;
+}
+
+.mat-drawer{
+  width: 200px;
+  background-color: black;
+  .sidenav-links{
+    display: inline;
+    list-style: none;
+    li{
+      padding: 20px  0 20px 10px;
+      background-color: rgba($color: #000000, $alpha: 0.6);
+      a{
+        color: white;
+        font-size: 18px;
+        &.active{
+          text-decoration: underline;
+        }
+      }
+    }
+
+
+  }
+}

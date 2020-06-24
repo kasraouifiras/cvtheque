@@ -1,0 +1,14 @@
+<div class="container d-flex align-items-center justify-content-center" style="height: 100%;">
+  <mat-card style="width: 50%;" class="text-center">
+    <h1 class="text-center">Candidate Informations</h1>
+    <div *ngIf="candidate">
+      <p><span class="attribut">First name : </span>{{candidate.first_name}}</p>
+      <p><span class="attribut">Last name :  </span>{{candidate.last_name}}</p>
+      <p><span class="attribut">Phone number :  </span>{{candidate.phone}}</p>
+      <p><span class="attribut">Email :  </span>{{candidate.email}}</p>
+      <p *ngIf="candidate.cv_path==''">No CV file for this candidate</p>
+      <p *ngIf="candidate.cv_path!=''">Click on the button to download the cv <a href="http://127.0.0.1:8000/storage/cv_files/{{candidate.cv_path}}" target="_blank">download</a></p>
+    </div>
+
+  </mat-card>
+</div>

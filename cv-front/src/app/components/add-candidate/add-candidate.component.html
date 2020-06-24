@@ -1,0 +1,34 @@
+<div class="container d-flex align-items-center" style="height: 100%;">
+  <mat-card>
+    <div class="form-error" *ngIf="errors.length>0">
+      <p *ngFor="let error of errors">{{error}}</p>
+    </div>
+    <h1 class="text-center">Adding a Candidate</h1>
+    <form [formGroup]="candidateForm">
+      <mat-form-field class="col-md-6 col-12" appearance="outline">
+        <mat-label>First name</mat-label>
+        <input matInput formControlName="first_name">
+      </mat-form-field>
+      <mat-form-field class="col-md-6 col-12" appearance="outline">
+        <mat-label>Last name</mat-label>
+        <input matInput formControlName="last_name">
+      </mat-form-field>
+      <mat-form-field class="col-md-6 col-12" appearance="outline">
+        <mat-label>Phone number</mat-label>
+        <input matInput formControlName="phone">
+      </mat-form-field>
+      <mat-form-field class="col-md-6 col-12" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email">
+      </mat-form-field>
+      <div class="col-12 d-flex justify-content-center">
+        <input type="file" formControlName="cv_file" accept=".doc,.docx,.pdf" (change)="handleFileInput($event.target.files)">
+      </div>
+      <div class="col-12 d-flex justify-content-center" style="margin-top:50px;">
+        <button mat-raised-button color="accent" style="margin: 0 10px;" (click)="onReset()">Reset</button>
+        <button mat-raised-button color="primary" style="margin: 0 10px;" (click)="onSubmit()">Add</button>
+      </div>
+
+    </form>
+  </mat-card>
+</div>

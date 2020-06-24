@@ -1,0 +1,13 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <ul class="sidenav-links">
+      <li><a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+      <li><a [routerLink]="['/add_candidate']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Add a candidate</a></li>
+      <li><a [routerLink]="['/candidates_list']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Candidates List</a></li>
+    </ul>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet>
+    </router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
